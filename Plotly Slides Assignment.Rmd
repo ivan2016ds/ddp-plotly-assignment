@@ -1,0 +1,40 @@
+---
+title: "Plotly Slides Assignment"
+author: "Ivan"
+date: "April 27, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=T,message=F,warning=F)
+```
+
+## Introduction
+
+This is a simple assignment to demonstrate the usage of `ioslides` and `plotly`.
+
+## Load Library and Create Plot
+
+```{r loadLib}
+library(plotly)
+```
+
+A simple scatter plot featuring the famous `iris` dataset.
+
+```{r createPlot}
+data("iris")
+petalPlot <- plot_ly(x=iris$Petal.Length, y=iris$Petal.Width,
+                     color=iris$Species, mode="marker")
+```
+
+## Simple Scatter Plot
+
+```{r drawPlot}
+petalPlot
+```
+
+## That's all!
+
+Thank you for taking your time to review my assignment. 
+
+Have a nice day!
